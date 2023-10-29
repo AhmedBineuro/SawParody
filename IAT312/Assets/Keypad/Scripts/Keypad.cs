@@ -97,7 +97,9 @@ public class Keypad : MonoBehaviour
 
         yield return new WaitForSeconds(displayResultTime);
         displayingResult = false;
-        if (granted) yield break;
+        /*if (granted) yield break;*/
+        granted = false;
+        accessWasGranted = false;
         ClearInput();
         panelMesh.material.SetVector("_EmissionColor", screenNormalColor * screenIntensity);
 

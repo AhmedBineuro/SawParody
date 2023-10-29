@@ -44,14 +44,14 @@ public class Doors : MonoBehaviour
                 DoorCloses();
         }
     }
-    void DoorOpens ()
+    public void DoorOpens ()
     {
         door.SetBool("open", true);
         door.SetBool("closed", false);
 
     }
 
-    void DoorCloses()
+    public void DoorCloses()
     {
         door.SetBool("open", false);
         door.SetBool("closed", true);
