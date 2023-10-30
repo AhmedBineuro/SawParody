@@ -6,9 +6,10 @@ public class Doors : MonoBehaviour
 {
     public Animator door;
     public GameObject openText;
+    public GameObject lockedText;
     private bool inReach;
     public bool isOpen = false;
-    public bool isLocked = false;
+    public bool isLocked;
 
     void Start()
     {
@@ -19,10 +20,12 @@ public class Doors : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Reach" && isLocked == false)
+        if (other.gameObject.tag == "Reach")
         {
             inReach = true;
-            openText.SetActive(true);
+            if (!isLocked)
+                openText.SetActive(true);
+            else lockedText.SetActive(true);
         }
     }
 
@@ -31,7 +34,9 @@ public class Doors : MonoBehaviour
         if (other.gameObject.tag == "Reach")
         {
             inReach = false;
-            openText.SetActive(false);
+            if(isLocked == false)
+                openText.SetActive(false);
+            else lockedText.SetActive(false);
         }
         else if (other.gameObject.CompareTag("Player"))
         {
@@ -52,9 +57,13 @@ public class Doors : MonoBehaviour
         }
     }
 
-    void LockDoor()
+    public void LockDoor()
     {
         isLocked = true;
+    }
+    public void UnlockDoor()
+    {
+        isLocked = false;
     }
     public void DoorOpens ()
     {

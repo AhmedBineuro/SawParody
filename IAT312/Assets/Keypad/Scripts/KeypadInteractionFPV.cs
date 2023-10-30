@@ -12,18 +12,18 @@ public class KeypadInteractionFPV : MonoBehaviour
     {
         var ray = cam.ScreenPointToRay(Input.mousePosition);
 
-        if (Input.GetButtonDown("Interact"))
+        if (Physics.Raycast(ray, out var hit))
         {
-            if (Physics.Raycast(ray, out var hit))
+            if (Input.GetButtonDown("Interact"))
             {
+                openText.SetActive(true);
                 if (hit.collider.TryGetComponent(out KeypadButton keypadButton))
                 {
-                    openText.SetActive(true);
                     keypadButton.PressButton();
                 }
             }
             else openText.SetActive(false);
-            }
+        }
     }
 }
 }

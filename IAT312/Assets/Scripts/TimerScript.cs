@@ -4,6 +4,7 @@ using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
@@ -11,10 +12,11 @@ public class TimerScript : MonoBehaviour
     public bool timerOn = false;
     public TextMeshProUGUI text;
     public UnityEvent keypadEvent;
+    public FirstPersonCamera player;
     // Start is called before the first frame update
     void Start()
     {
-        timerOn = true;
+        timerOn = false;
     }
 
     // Update is called once per frame
@@ -31,9 +33,9 @@ public class TimerScript : MonoBehaviour
             }
             else
             {
-                keypadEvent.Invoke();
                 timeLeft = 0;
                 timerOn = false;
+                keypadEvent.Invoke();
             }
         }
         else if (text.enabled)
@@ -48,5 +50,12 @@ public class TimerScript : MonoBehaviour
         float minutes= Mathf.FloorToInt(currentTime/60);
         float seconds= Mathf.FloorToInt(currentTime%60);
         text.text = string.Format("{0:00}:{1:00}",minutes,seconds);
+    }
+    public void updateScene()
+    {
+        player.MoveCam = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneManager.LoadScene("BadEnding");
     }
 }
