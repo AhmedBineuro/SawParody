@@ -10,7 +10,6 @@ namespace KeypadSystem
         [Header("Raycast Keypad Tag")]
         [SerializeField] private string keypadTag = "Keypad";
 
-        public GameObject openText;
         private KeypadItem keypadItem;
         private Camera _camera;
 
@@ -27,13 +26,11 @@ namespace KeypadSystem
                 if (raycastedObj != null && raycastedObj.CompareTag(keypadTag))
                 {
                     keypadItem = raycastedObj;
-                    openText.SetActive(true);
                     HighlightCrosshair(true);
                 }
                 else
                 {
                     ClearInteractable();
-                    openText.SetActive(false);
                 } 
             }
             else
