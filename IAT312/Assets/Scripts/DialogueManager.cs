@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using System;
+using KeypadSystem;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -21,8 +23,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMP_Text BodyText;
     [SerializeField] private Canvas dialogueCanvas;
     [SerializeField] private Doors[] doors;
-    private bool PlayingDialogue;
+    [SerializeField] private GameObject[] toggleItem;
     private bool Skip;
+    public bool playing;
     private int CurrentSegmentIndex;
     private GameObject parentGameObject; // Reference to the parent GameObject
     private DialogueSegment currentDialogueSegment;
@@ -64,7 +67,15 @@ public class DialogueManager : MonoBehaviour
             {
                 doors[i].LockDoor();
             }
+            for (int i = 0; i < toggleItem.Length; i++)
+            {
+                KeypadInteractor interactor = toggleItem[i].GetComponent<KeypadInteractor>();
+                if (interactor != null)
+                    interactor.enabled = !interactor.enabled;
+                else toggleItem[i].SetActive(!toggleItem[i].activeInHierarchy);
+            }
             StartCoroutine(PlayDialogue(currentDialogueSegment));
+            playing = true;
         }
         else
         {
@@ -79,24 +90,39 @@ public class DialogueManager : MonoBehaviour
         {
             doors[i].UnlockDoor();
         }
+        for (int i = 0; i < toggleItem.Length; i++)
+        {
+            KeypadInteractor interactor = toggleItem[i].GetComponent<KeypadInteractor>();
+            if (interactor != null)
+                interactor.enabled = !interactor.enabled;
+            else toggleItem[i].SetActive(!toggleItem[i].activeInHierarchy);
+        }
         Invoke("HideDialogueCanvas", 1f);
+    }
+    public void clearSegments()
+    {
+        CurrentSegmentIndex=DialogueSegments.Length;
     }
 
     private void HideDialogueCanvas()
     {
+        playing = false;
         dialogueCanvas.gameObject.SetActive(false); // Hide the entire Canvas GameObject
     }
 
     private void Update()
     {
         // Handle skipping or closing the dialogue here if needed
+        if (Input.GetButtonDown("Interact") && playing)
+        {
+            Skip=true;
+        }
     }
 
     private IEnumerator PlayDialogue(DialogueSegment segment)
     {
         ShowDialogueCanvas();
-
-        PlayingDialogue = true;
+        playing = true;
         BodyText.SetText(string.Empty);
         SubjectText.SetText(segment.SubjectText);
 
@@ -121,9 +147,6 @@ public class DialogueManager : MonoBehaviour
             BodyText.text += chunkToAdd;
             yield return new WaitForSeconds(delay);
         }
-
-        PlayingDialogue = false;
-
         // Move to the next segment if available
         CurrentSegmentIndex++;
         if (CurrentSegmentIndex < DialogueSegments.Length)
@@ -134,6 +157,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             // All segments are displayed, hide the text and the parent GameObject
+            playing = false;
             HideDialogueCanvasWithDelay();
             gameObject.SetActive(false); // Hide the DialogueManager GameObject
             if (parentGameObject != null)

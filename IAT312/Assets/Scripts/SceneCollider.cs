@@ -22,5 +22,9 @@ public class SceneCollider : MonoBehaviour
             SceneManager.LoadScene(sceneToLoad);
         }
     }
+    public void setSceneToLoad(string sceneToLoad)
+    {
+        this.sceneToLoad = sceneToLoad;
+    }
 }
 

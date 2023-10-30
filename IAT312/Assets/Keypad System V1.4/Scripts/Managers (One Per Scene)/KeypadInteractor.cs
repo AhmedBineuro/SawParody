@@ -23,15 +23,20 @@ namespace KeypadSystem
             if (Physics.Raycast(_camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f)), transform.forward, out RaycastHit hit, interactDistance))
             {
                 var raycastedObj = hit.collider.GetComponent<KeypadItem>();
-                if (raycastedObj != null && raycastedObj.CompareTag(keypadTag))
+                var door = hit.collider.GetComponent<Doors>();
+                if ((raycastedObj != null && raycastedObj.CompareTag(keypadTag)) )
                 {
                     keypadItem = raycastedObj;
                     HighlightCrosshair(true);
                 }
-                else
+                else if (raycastedObj != null && raycastedObj.CompareTag("Door"))
                 {
-                    ClearInteractable();
-                } 
+                    HighlightCrosshair(true);
+                }
+            else
+            {
+                ClearInteractable();
+            } 
             }
             else
             {

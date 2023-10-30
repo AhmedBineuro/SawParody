@@ -20,12 +20,15 @@ public class Doors : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Reach")
+        if (other.gameObject.tag == "Reach" && isLocked==false)
         {
             inReach = true;
-            if(!isLocked)
-                openText.SetActive(true);
-            else lockedText.SetActive(true);
+            openText.SetActive(true);
+        }
+        else if(other.gameObject.tag == "Reach" && isLocked==true)
+        {
+            inReach = true;
+            openText.SetActive(true);
         }
     }
 
@@ -35,6 +38,7 @@ public class Doors : MonoBehaviour
         {
             inReach = false;
             openText.SetActive(false);
+            lockedText.SetActive(false);
         }
         else if (other.gameObject.CompareTag("Player"))
         {

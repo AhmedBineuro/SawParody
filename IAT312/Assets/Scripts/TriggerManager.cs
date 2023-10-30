@@ -12,10 +12,12 @@ public class TriggerHandler : MonoBehaviour
         if (!hasBeenActivated && other.CompareTag("Player"))
         {
             // Set the specific dialogue segment and start the dialogue
-            dialogueManager.SetDialogueSegment(dialogueSegmentIndex);
-            dialogueManager.StartDialogue();
-
-            hasBeenActivated = true; // Mark the trigger as activated
+            if (!dialogueManager.playing)
+            {       
+                dialogueManager.SetDialogueSegment(dialogueSegmentIndex);
+                dialogueManager.StartDialogue();
+                hasBeenActivated = true; // Mark the trigger as activated
+            }
         }
     }
 
