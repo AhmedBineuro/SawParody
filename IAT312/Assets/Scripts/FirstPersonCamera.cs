@@ -23,5 +23,10 @@ public class FirstPersonCamera : MonoBehaviour
             cam.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
             transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensitivity);
         }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
    }
 }

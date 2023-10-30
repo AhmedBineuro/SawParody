@@ -35,6 +35,7 @@ public class TimerScript : MonoBehaviour
             {
                 timeLeft = 0;
                 timerOn = false;
+                lockPlayer();
                 keypadEvent.Invoke();
             }
         }
@@ -51,11 +52,8 @@ public class TimerScript : MonoBehaviour
         float seconds= Mathf.FloorToInt(currentTime%60);
         text.text = string.Format("{0:00}:{1:00}",minutes,seconds);
     }
-    public void updateScene()
+    public void lockPlayer()
     {
         player.MoveCam = false;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        SceneManager.LoadScene("BadEnding");
     }
 }

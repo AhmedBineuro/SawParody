@@ -9,7 +9,7 @@ public class Doors : MonoBehaviour
     public GameObject lockedText;
     private bool inReach;
     public bool isOpen = false;
-    public bool isLocked;
+    public bool isLocked=false;
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class Doors : MonoBehaviour
         if (other.gameObject.tag == "Reach")
         {
             inReach = true;
-            if (!isLocked)
+            if(!isLocked)
                 openText.SetActive(true);
             else lockedText.SetActive(true);
         }
@@ -34,9 +34,7 @@ public class Doors : MonoBehaviour
         if (other.gameObject.tag == "Reach")
         {
             inReach = false;
-            if(isLocked == false)
-                openText.SetActive(false);
-            else lockedText.SetActive(false);
+            openText.SetActive(false);
         }
         else if (other.gameObject.CompareTag("Player"))
         {
@@ -50,7 +48,7 @@ public class Doors : MonoBehaviour
     {
         if (inReach && Input.GetButtonDown("Interact"))
         {
-            if(door.GetBool("closed") && !isLocked)
+            if (door.GetBool("closed") && !isLocked)
                 DoorOpens();
             else
                 DoorCloses();
