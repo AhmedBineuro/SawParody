@@ -24,8 +24,6 @@ public class TimerScript : MonoBehaviour
     {
         if (timerOn)
         {
-            if(!text.enabled)
-                text.enabled = true;
             if (timeLeft > 0)
             {
                 timeLeft -= Time.deltaTime;
@@ -39,10 +37,6 @@ public class TimerScript : MonoBehaviour
                 keypadEvent.Invoke();
             }
         }
-        else if (text.enabled)
-        {
-            text.enabled = false;
-        }
     }
     void updateTimer(float currentTime)
     {
@@ -55,5 +49,18 @@ public class TimerScript : MonoBehaviour
     public void lockPlayer()
     {
         player.MoveCam = false;
+    }
+    public void toggleTimerOn()
+    {
+        timerOn = !timerOn;
+    }
+    public void setTimerOn(bool state)
+    {
+        timerOn = state;
+    }
+    public void setTimer(float time)
+    {
+        timeLeft= time;
+        timerOn= true;
     }
 }

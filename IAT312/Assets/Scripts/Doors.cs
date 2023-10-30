@@ -10,6 +10,7 @@ public class Doors : MonoBehaviour
     private bool inReach;
     public bool isOpen = false;
     public bool isLocked=false;
+    public bool autoCLose = true;
 
     void Start()
     {
@@ -40,7 +41,7 @@ public class Doors : MonoBehaviour
             openText.SetActive(false);
             lockedText.SetActive(false);
         }
-        else if (other.gameObject.CompareTag("Player"))
+        else if (other.gameObject.CompareTag("Player") && autoCLose)
         {
             isLocked = true;
             Invoke("DoorCloses", 20f);
@@ -72,6 +73,7 @@ public class Doors : MonoBehaviour
         door.SetBool("open", true);
         door.SetBool("closed", false);
         isOpen = true;
+        isLocked = false;
 
     }
 
@@ -80,6 +82,10 @@ public class Doors : MonoBehaviour
         door.SetBool("open", false);
         door.SetBool("closed", true);
         isOpen = false;
+    }
+    public void setAutoCLose(bool autoCLose)
+    {
+        this.autoCLose = autoCLose;
     }
 
 }

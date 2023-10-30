@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using KeypadSystem;
+using UnityEngine.Events;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -22,8 +23,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMP_Text SubjectText;
     [SerializeField] private TMP_Text BodyText;
     [SerializeField] private Canvas dialogueCanvas;
-    [SerializeField] private Doors[] doors;
-    [SerializeField] private GameObject[] toggleItem;
+    [SerializeField] private UnityEvent postDialogueEvents;
+    [SerializeField] private UnityEvent preDialogueEvents;
     private bool Skip;
     public bool playing;
     private int CurrentSegmentIndex;
@@ -61,19 +62,8 @@ public class DialogueManager : MonoBehaviour
     {
         // Check if a valid dialogue segment is set before starting the dialogue
         if (currentDialogueSegment != null)
-        {
-            // Start displaying the dialogue segment
-            for(int i=0;i<doors.Length;i++)
-            {
-                doors[i].LockDoor();
-            }
-            for (int i = 0; i < toggleItem.Length; i++)
-            {
-                KeypadInteractor interactor = toggleItem[i].GetComponent<KeypadInteractor>();
-                if (interactor != null)
-                    interactor.enabled = !interactor.enabled;
-                else toggleItem[i].SetActive(!toggleItem[i].activeInHierarchy);
-            }
+        {               // Start displaying the dialogue segment
+            preDialogueEvents.Invoke();
             StartCoroutine(PlayDialogue(currentDialogueSegment));
             playing = true;
         }
@@ -85,18 +75,7 @@ public class DialogueManager : MonoBehaviour
 
     private void HideDialogueCanvasWithDelay()
     {
-        // Hide the canvas and the parent GameObject after a delay of 2 seconds
-        for (int i = 0; i < doors.Length; i++)
-        {
-            doors[i].UnlockDoor();
-        }
-        for (int i = 0; i < toggleItem.Length; i++)
-        {
-            KeypadInteractor interactor = toggleItem[i].GetComponent<KeypadInteractor>();
-            if (interactor != null)
-                interactor.enabled = !interactor.enabled;
-            else toggleItem[i].SetActive(!toggleItem[i].activeInHierarchy);
-        }
+        postDialogueEvents.Invoke();
         Invoke("HideDialogueCanvas", 1f);
     }
     public void clearSegments()
