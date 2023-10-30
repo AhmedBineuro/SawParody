@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Globalization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TimerScript : MonoBehaviour
 {
     public float timeLeft;
     public bool timerOn = false;
     public TextMeshProUGUI text;
+    public UnityEvent keypadEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class TimerScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("Time is up");
+                keypadEvent.Invoke();
                 timeLeft = 0;
                 timerOn = false;
             }
