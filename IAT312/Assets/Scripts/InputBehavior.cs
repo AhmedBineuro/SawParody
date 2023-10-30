@@ -8,7 +8,7 @@ public class InputBehavior : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerInput.OnFootActions onFoot;
     private PlayerMotor motor;
-    private FirstPersonCamera look;
+    public FirstPersonCamera look;
     // Start is called before the first frame update
     void Awake()
     {

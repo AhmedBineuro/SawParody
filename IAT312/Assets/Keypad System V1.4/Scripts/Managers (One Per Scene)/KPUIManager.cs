@@ -22,6 +22,7 @@ namespace KeypadSystem
         [SerializeField] private GameObject keyboardCanvas = null;
         [SerializeField] private GameObject bombCanvas = null;
 
+
         private bool firstKeypadClick;
         private KeypadController _keypadController;
         private KeypadType _keypadType;
@@ -147,10 +148,12 @@ namespace KeypadSystem
             if (on)
             {
                 crosshair.color = Color.red;
+                interactPrompt.SetActive(true);
             }
             else
             {
                 crosshair.color = Color.white;
+                interactPrompt.SetActive(false);
             }
         }
 
