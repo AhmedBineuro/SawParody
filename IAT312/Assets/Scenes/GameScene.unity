@@ -3158,7 +3158,7 @@ GameObject:
   - component: {fileID: 236966403}
   - component: {fileID: 236966402}
   - component: {fileID: 236966401}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Final Puzzle Safety
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5321,6 +5321,7 @@ GameObject:
   - component: {fileID: 387020884}
   - component: {fileID: 387020885}
   - component: {fileID: 387020887}
+  - component: {fileID: 387020888}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5419,6 +5420,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactDistance: 5
   keypadTag: Keypad
+--- !u!114 &387020888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387020883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5775036c6e7ee534f8a0d1dadb1571cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reach_length: 10
+  canvas: {fileID: 395967818}
+  interactKey: Interact
 --- !u!1 &391221590
 GameObject:
   m_ObjectHideFlags: 0
@@ -7027,7 +7043,7 @@ GameObject:
   - component: {fileID: 495828408}
   - component: {fileID: 495828407}
   - component: {fileID: 495828406}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tutorial Room Safety
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8020,7 +8036,7 @@ GameObject:
   - component: {fileID: 563011790}
   - component: {fileID: 563011789}
   - component: {fileID: 563011788}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tutorial Hallway Safety
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11893,6 +11909,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4840468557569570, guid: fbf0f9b9b157bff4fb5b0e275e6ae2a7, type: 3}
   m_PrefabInstance: {fileID: 194915680}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &873457586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+  m_PrefabInstance: {fileID: 1312287972}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &873457591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873457586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662b7dcafdd813041aa4361e69deb1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Function:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 771035738}
+        m_TargetAssemblyTypeName: PlayAudioAndSwitchScene, Assembly-CSharp
+        m_MethodName: PlayAudioAndSwitch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!65 &873457592
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873457586}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.20999998, y: 0, z: 0.28999996}
+  m_Center: {x: 0, y: 0.00050799997, z: 0}
 --- !u!4 &876542800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4561333288934422, guid: 04ae48206d5646c44a99cb799d328299, type: 3}
@@ -12364,7 +12433,7 @@ GameObject:
   - component: {fileID: 926501489}
   - component: {fileID: 926501492}
   - component: {fileID: 926501491}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17305,7 +17374,7 @@ GameObject:
   - component: {fileID: 1278664669}
   - component: {fileID: 1278664668}
   - component: {fileID: 1278664667}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Choice Room Safety
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17766,6 +17835,81 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0.00000020861626}
+--- !u!1001 &1312287972
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_Name
+      value: Paper
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6364
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6364
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6364
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.942586
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.202
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -212.46783
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000003774895
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4413510086684120, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 873457591}
+    - targetCorrespondingSourceObject: {fileID: 1801278519735074, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 873457592}
+  m_SourcePrefab: {fileID: 100100000, guid: 0b7451c289c0d9547a21ba7eb3340776, type: 3}
 --- !u!4 &1313602914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 494596, guid: acb5b460622c8ee4b825a3e68c33c1b6, type: 3}
@@ -22506,7 +22650,7 @@ GameObject:
   - component: {fileID: 1571904076}
   - component: {fileID: 1571904075}
   - component: {fileID: 1571904074}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Number Puzzle Safety
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23634,7 +23778,7 @@ GameObject:
   - component: {fileID: 1630053753}
   - component: {fileID: 1630053752}
   - component: {fileID: 1630053751}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Reach
   m_TagString: Reach
   m_Icon: {fileID: 0}
@@ -26214,7 +26358,7 @@ GameObject:
   - component: {fileID: 1833582269}
   - component: {fileID: 1833582268}
   - component: {fileID: 1833582267}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wife Puzzle Safety
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28189,7 +28333,7 @@ GameObject:
   - component: {fileID: 1983553370}
   - component: {fileID: 1983553369}
   - component: {fileID: 1983553368}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Word Puzzle Safety
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30777,3 +30921,4 @@ SceneRoots:
   - {fileID: 2026550920}
   - {fileID: 771035737}
   - {fileID: 861786352}
+  - {fileID: 1312287972}

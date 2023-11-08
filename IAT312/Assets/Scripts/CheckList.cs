@@ -39,7 +39,6 @@ public class CheckList : MonoBehaviour
     {
         if (listDictionary.Count==0)
             checkListCanvas.SetActive(false);
-        Debug.Log("Count: " + listDictionary.Count);
     }
 
     //Function to remove the checklist item from the list

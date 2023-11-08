@@ -9,48 +9,42 @@ public class Raycast : MonoBehaviour
     [SerializeField] private float reach_length;
     private Camera main_camera;
 
-    [Header("Crosshair")]
-    [SerializeField] private Image crosshair;
+    [Header("HUD Element")]
+    [SerializeField] private GameObject canvas;
 
-    [Header("Input Key")]
-    [SerializeField] private KeyCode interactKey;
-
-    // Start is called before the first frame update
+    [Header("Interact Key Name")]
+    [SerializeField] private string interactKey;
     void Start()
     {
-        main_camera = GetComponent<Camera>(); // Change getComponent to GetComponent
+        main_camera = Camera.main; // This assigns the main camera from the scene to the variable.
     }
 
     // Update is called once per frame
+
     private void Update()
     {
-        if (Physics.Raycast(main_camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f)), transform.forward, out RaycastHit hit, reach_length))
+        LayerMask mask = ~LayerMask.GetMask("Ignore Raycast");
+        if (Physics.Raycast(main_camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f)), main_camera.transform.forward, out RaycastHit hit, reach_length,mask))
         {
             var readableItem = hit.collider.GetComponent<InteractableController>(); // Change getComponent to GetComponent
             if (readableItem != null)
             {
-                // show the hud and switch the control scheme 
+                canvas.SetActive(true);
+                if (Input.GetButton(interactKey))
+                { 
+                    readableItem.Interact(); 
+                }
             }
             else
             {
                 // Clear readable Item
+                canvas.SetActive(false);
             }
         }
         else
         {
             // Clear readable Item
+            canvas.SetActive(false);
         }
-
-        /*if(*//*Linked InteractableController*//*)
-        {
-            if (Input.GetKeyDown(interactKey))
-            {
-
-            }
-        }*/
-    }
-
-    void HighlightCrosshair(bool on)
-    {
     }
 }

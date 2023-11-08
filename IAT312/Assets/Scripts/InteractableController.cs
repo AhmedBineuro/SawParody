@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractableController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public UnityEvent Function;
+    // This method would be called when the object is interacted with
+    public void Interact()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Define what happens when the object is interacted with
+        Function.Invoke();
     }
 }
