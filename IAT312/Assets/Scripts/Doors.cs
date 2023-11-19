@@ -10,7 +10,7 @@ public class Doors : MonoBehaviour
     private bool inReach;
     public bool isOpen = false;
     public bool isLocked=false;
-    public bool autoCLose = true;
+    public bool autoClose = true;
 
     void Start()
     {
@@ -21,16 +21,6 @@ public class Doors : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-/*        if (other.gameObject.tag == "Reach" && isLocked==false)
-        {
-            inReach = true;
-            openText.SetActive(true);
-        }
-        else if(other.gameObject.tag == "Reach" && isLocked==true)
-        {
-            inReach = true;
-            openText.SetActive(true);
-        }*/
     }
 
     void OnTriggerExit(Collider other)
@@ -41,7 +31,7 @@ public class Doors : MonoBehaviour
             openText.SetActive(false);
             lockedText.SetActive(false);
         }
-        else if (other.gameObject.CompareTag("Player") && autoCLose)
+        else if (other.gameObject.CompareTag("Player") && autoClose)
         {
             isLocked = true;
             Invoke("DoorCloses", 20f);
@@ -70,11 +60,13 @@ public class Doors : MonoBehaviour
     }
     public void DoorOpens ()
     {
-        door.SetBool("open", true);
-        door.SetBool("closed", false);
-        isOpen = true;
-        isLocked = false;
-
+        if (!isLocked)
+        {
+            door.SetBool("open", true);
+            door.SetBool("closed", false);
+            isOpen = true;
+            isLocked = false;
+        }
     }
 
     public void DoorCloses()
@@ -83,9 +75,9 @@ public class Doors : MonoBehaviour
         door.SetBool("closed", true);
         isOpen = false;
     }
-    public void setAutoCLose(bool autoCLose)
+    public void setAutoCLose(bool autoClose)
     {
-        this.autoCLose = autoCLose;
+        this.autoClose = autoClose;
     }
 
 }

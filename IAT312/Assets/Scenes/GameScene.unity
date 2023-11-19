@@ -2805,6 +2805,7 @@ GameObject:
   - component: {fileID: 227025113}
   - component: {fileID: 227025112}
   - component: {fileID: 227025111}
+  - component: {fileID: 227025117}
   m_Layer: 0
   m_Name: TutorialHallwayDoor
   m_TagString: Door
@@ -2886,7 +2887,7 @@ MonoBehaviour:
   lockedText: {fileID: 695855668}
   isOpen: 0
   isLocked: 0
-  autoCLose: 1
+  autoClose: 1
 --- !u!95 &227025114
 Animator:
   serializedVersion: 5
@@ -2958,6 +2959,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227025109}
   m_Mesh: {fileID: 4300000, guid: 4cee08c7276bf274d91d84489cdf46de, type: 3}
+--- !u!114 &227025117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227025109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662b7dcafdd813041aa4361e69deb1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Function:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 227025113}
+        m_TargetAssemblyTypeName: Doors, Assembly-CSharp
+        m_MethodName: DoorOpens
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &228593435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5998,7 +6026,6 @@ MonoBehaviour:
   Function:
     m_PersistentCalls:
       m_Calls: []
-  parentObject: {fileID: 416123209}
 --- !u!1001 &418854179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11014,6 +11041,7 @@ GameObject:
   - component: {fileID: 769215020}
   - component: {fileID: 769215026}
   - component: {fileID: 769215025}
+  - component: {fileID: 769215027}
   m_Layer: 0
   m_Name: TutorialDoor
   m_TagString: Door
@@ -11053,7 +11081,7 @@ MonoBehaviour:
   lockedText: {fileID: 695855668}
   isOpen: 0
   isLocked: 0
-  autoCLose: 1
+  autoClose: 1
 --- !u!95 &769215022
 Animator:
   serializedVersion: 5
@@ -11167,6 +11195,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.769574, y: 4.755562, z: 0.53200525}
   m_Center: {x: 1.3070115, y: 0.00000011920929, z: 0.07809949}
+--- !u!114 &769215027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769215017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662b7dcafdd813041aa4361e69deb1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Function:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 769215020}
+        m_TargetAssemblyTypeName: Doors, Assembly-CSharp
+        m_MethodName: DoorOpens
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &771035735
 GameObject:
   m_ObjectHideFlags: 0
@@ -11459,7 +11514,6 @@ MonoBehaviour:
   Function:
     m_PersistentCalls:
       m_Calls: []
-  parentObject: {fileID: 783470043}
 --- !u!1 &786438159
 GameObject:
   m_ObjectHideFlags: 0
@@ -11928,7 +11982,6 @@ MonoBehaviour:
   Function:
     m_PersistentCalls:
       m_Calls: []
-  parentObject: {fileID: 804813829}
 --- !u!1 &812029459
 GameObject:
   m_ObjectHideFlags: 0
@@ -17370,6 +17423,7 @@ GameObject:
   - component: {fileID: 1235410273}
   - component: {fileID: 1235410272}
   - component: {fileID: 1235410271}
+  - component: {fileID: 1235410277}
   m_Layer: 0
   m_Name: NumPad Door
   m_TagString: Door
@@ -17451,7 +17505,7 @@ MonoBehaviour:
   lockedText: {fileID: 695855668}
   isOpen: 0
   isLocked: 1
-  autoCLose: 1
+  autoClose: 1
 --- !u!95 &1235410274
 Animator:
   serializedVersion: 5
@@ -17523,6 +17577,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235410269}
   m_Mesh: {fileID: 4300000, guid: 4cee08c7276bf274d91d84489cdf46de, type: 3}
+--- !u!114 &1235410277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235410269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662b7dcafdd813041aa4361e69deb1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Function:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1235410273}
+        m_TargetAssemblyTypeName: Doors, Assembly-CSharp
+        m_MethodName: DoorOpens
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1242400766
 GameObject:
   m_ObjectHideFlags: 0
@@ -19683,6 +19764,7 @@ GameObject:
   - component: {fileID: 1373698242}
   - component: {fileID: 1373698241}
   - component: {fileID: 1373698240}
+  - component: {fileID: 1373698246}
   m_Layer: 0
   m_Name: WifePuzzle Door
   m_TagString: Door
@@ -19764,7 +19846,7 @@ MonoBehaviour:
   lockedText: {fileID: 695855668}
   isOpen: 0
   isLocked: 0
-  autoCLose: 1
+  autoClose: 1
 --- !u!95 &1373698243
 Animator:
   serializedVersion: 5
@@ -19836,6 +19918,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1373698238}
   m_Mesh: {fileID: 4300000, guid: 4cee08c7276bf274d91d84489cdf46de, type: 3}
+--- !u!114 &1373698246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373698238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662b7dcafdd813041aa4361e69deb1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Function:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1373698242}
+        m_TargetAssemblyTypeName: Doors, Assembly-CSharp
+        m_MethodName: DoorOpens
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1379371889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4561333288934422, guid: 04ae48206d5646c44a99cb799d328299, type: 3}
@@ -20278,7 +20387,6 @@ MonoBehaviour:
   Function:
     m_PersistentCalls:
       m_Calls: []
-  parentObject: {fileID: 1414867231}
 --- !u!1 &1426642775
 GameObject:
   m_ObjectHideFlags: 0
@@ -22270,6 +22378,7 @@ GameObject:
   - component: {fileID: 1532667957}
   - component: {fileID: 1532667956}
   - component: {fileID: 1532667955}
+  - component: {fileID: 1532667961}
   m_Layer: 0
   m_Name: KeyPadChoice Door
   m_TagString: Door
@@ -22351,7 +22460,7 @@ MonoBehaviour:
   lockedText: {fileID: 695855668}
   isOpen: 0
   isLocked: 0
-  autoCLose: 1
+  autoClose: 1
 --- !u!95 &1532667958
 Animator:
   serializedVersion: 5
@@ -22423,6 +22532,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532667953}
   m_Mesh: {fileID: 4300000, guid: 4cee08c7276bf274d91d84489cdf46de, type: 3}
+--- !u!114 &1532667961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532667953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662b7dcafdd813041aa4361e69deb1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Function:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1532667957}
+        m_TargetAssemblyTypeName: Doors, Assembly-CSharp
+        m_MethodName: DoorOpens
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1538057461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24901,6 +25037,7 @@ GameObject:
   - component: {fileID: 1658504489}
   - component: {fileID: 1658504488}
   - component: {fileID: 1658504487}
+  - component: {fileID: 1658504493}
   m_Layer: 0
   m_Name: ExitDoor
   m_TagString: Door
@@ -24982,7 +25119,7 @@ MonoBehaviour:
   lockedText: {fileID: 695855668}
   isOpen: 0
   isLocked: 1
-  autoCLose: 0
+  autoClose: 0
 --- !u!95 &1658504490
 Animator:
   serializedVersion: 5
@@ -25054,6 +25191,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658504485}
   m_Mesh: {fileID: 4300000, guid: 4cee08c7276bf274d91d84489cdf46de, type: 3}
+--- !u!114 &1658504493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658504485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662b7dcafdd813041aa4361e69deb1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Function:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1658504489}
+        m_TargetAssemblyTypeName: Doors, Assembly-CSharp
+        m_MethodName: DoorOpens
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1659495578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 474866, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}
@@ -26177,7 +26341,7 @@ MonoBehaviour:
   lockedText: {fileID: 695855668}
   isOpen: 0
   isLocked: 0
-  autoCLose: 1
+  autoClose: 1
 --- !u!95 &1738119790
 Animator:
   serializedVersion: 5
@@ -29801,6 +29965,7 @@ GameObject:
   - component: {fileID: 2001362895}
   - component: {fileID: 2001362894}
   - component: {fileID: 2001362893}
+  - component: {fileID: 2001362899}
   m_Layer: 0
   m_Name: KeyPadPuzzle Door
   m_TagString: Door
@@ -29882,7 +30047,7 @@ MonoBehaviour:
   lockedText: {fileID: 695855668}
   isOpen: 0
   isLocked: 1
-  autoCLose: 1
+  autoClose: 1
 --- !u!95 &2001362896
 Animator:
   serializedVersion: 5
@@ -29954,6 +30119,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001362891}
   m_Mesh: {fileID: 4300000, guid: 4cee08c7276bf274d91d84489cdf46de, type: 3}
+--- !u!114 &2001362899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001362891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662b7dcafdd813041aa4361e69deb1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Function:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2001362895}
+        m_TargetAssemblyTypeName: Doors, Assembly-CSharp
+        m_MethodName: DoorOpens
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2003106760
 GameObject:
   m_ObjectHideFlags: 0
@@ -31647,6 +31839,7 @@ GameObject:
   - component: {fileID: 2097246589}
   - component: {fileID: 2097246588}
   - component: {fileID: 2097246587}
+  - component: {fileID: 2097246593}
   m_Layer: 0
   m_Name: NumPadChoice Door
   m_TagString: Door
@@ -31728,7 +31921,7 @@ MonoBehaviour:
   lockedText: {fileID: 695855668}
   isOpen: 0
   isLocked: 0
-  autoCLose: 1
+  autoClose: 1
 --- !u!95 &2097246590
 Animator:
   serializedVersion: 5
@@ -31800,6 +31993,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097246585}
   m_Mesh: {fileID: 4300000, guid: 4cee08c7276bf274d91d84489cdf46de, type: 3}
+--- !u!114 &2097246593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097246585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662b7dcafdd813041aa4361e69deb1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Function:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2097246589}
+        m_TargetAssemblyTypeName: Doors, Assembly-CSharp
+        m_MethodName: DoorOpens
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &2103310017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4105631882345270, guid: e9ddd0a598de7fd4bb2f220b74142fe0, type: 3}
