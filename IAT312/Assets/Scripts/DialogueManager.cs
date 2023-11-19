@@ -92,8 +92,9 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         // Handle skipping or closing the dialogue here if needed
-        if (Input.GetButtonDown("Interact") && playing)
+        if (Input.GetKeyDown(KeyCode.Tab) && playing)
         {
+            Debug.Log("SKIPPY");
             Skip=true;
         }
     }
