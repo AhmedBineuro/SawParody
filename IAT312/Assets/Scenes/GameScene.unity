@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17277041, g: 0.21589468, b: 0.2978279, a: 1}
+  m_IndirectSpecularColor: {r: 0.17277065, g: 0.21589491, b: 0.2978287, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4350,8 +4350,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341572121}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.6940036, z: -0, w: -0.71997154}
-  m_LocalPosition: {x: 55.4, y: 1.44, z: -229.88}
+  m_LocalRotation: {x: -0, y: -0.99998444, z: -0, w: -0.005579902}
+  m_LocalPosition: {x: 3.02, y: 1.44, z: -216.368}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4359,7 +4359,7 @@ Transform:
   - {fileID: 1630053750}
   - {fileID: 387020886}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -272.104, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180.639, z: 0}
 --- !u!23 &341572128
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10975,7 +10975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c648cd03f76db41a910602479b3244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 20
+  timeLeft: 120
   timerOn: 0
   text: {fileID: 343217724}
   keypadEvent:
@@ -24238,7 +24238,7 @@ MonoBehaviour:
   lockedText: {fileID: 695855668}
   isOpen: 0
   isLocked: 1
-  autoCLose: 1
+  autoCLose: 0
 --- !u!95 &1658504490
 Animator:
   serializedVersion: 5
@@ -26407,7 +26407,7 @@ NavMeshAgent:
   m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 1
   m_AngularSpeed: 120
   m_StoppingDistance: 4
   m_AutoTraverseOffMeshLink: 1
