@@ -6962,6 +6962,7 @@ MonoBehaviour:
   player: {fileID: 341572125}
   inputBehavior: {fileID: 341572131}
   image: {fileID: 237528879}
+  pauseMenuManager: {fileID: 341572141}
 --- !u!1001 &418854179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12800,6 +12801,7 @@ MonoBehaviour:
   player: {fileID: 341572125}
   inputBehavior: {fileID: 341572131}
   image: {fileID: 1989236113}
+  pauseMenuManager: {fileID: 341572141}
 --- !u!1 &786438159
 GameObject:
   m_ObjectHideFlags: 0
@@ -13441,6 +13443,7 @@ MonoBehaviour:
   player: {fileID: 341572125}
   inputBehavior: {fileID: 341572131}
   image: {fileID: 2091107303}
+  pauseMenuManager: {fileID: 341572141}
 --- !u!1 &812029459
 GameObject:
   m_ObjectHideFlags: 0
@@ -15888,6 +15891,10 @@ PrefabInstance:
       propertyPath: keypadInteractor
       value: 
       objectReference: {fileID: 387020887}
+    - target: {fileID: 1034249550876429239, guid: 25c96cea46aa5c2438dde12d36c1d093, type: 3}
+      propertyPath: pauseMenuManager
+      value: 
+      objectReference: {fileID: 341572141}
     - target: {fileID: 1034249550876429239, guid: 25c96cea46aa5c2438dde12d36c1d093, type: 3}
       propertyPath: firstpersonController
       value: 
@@ -23086,6 +23093,7 @@ MonoBehaviour:
   player: {fileID: 341572125}
   inputBehavior: {fileID: 341572131}
   image: {fileID: 1144482069}
+  pauseMenuManager: {fileID: 341572141}
 --- !u!1 &1426642775
 GameObject:
   m_ObjectHideFlags: 0

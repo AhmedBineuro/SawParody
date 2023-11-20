@@ -10,6 +10,7 @@ public class PolaroidDisplayer : MonoBehaviour
     [SerializeField] private CharacterController player = null;
     [SerializeField] private InputBehavior inputBehavior = null;
     [SerializeField] private GameObject image;
+    [SerializeField] private PauseMenuManager pauseMenuManager = null;
     private Boolean isOpen = false;
     void Start()
     {
@@ -37,6 +38,14 @@ public class PolaroidDisplayer : MonoBehaviour
         if (inputBehavior != null)
         {
             inputBehavior.look.MoveCam = !disable;
+        }
+        else
+        {
+            Debug.LogError("Add the input behaviour script (Usually found on the Player) to the Disable Manager");
+        }
+        if (pauseMenuManager != null)
+        {
+            pauseMenuManager.enabled = !disable;
         }
         else
         {

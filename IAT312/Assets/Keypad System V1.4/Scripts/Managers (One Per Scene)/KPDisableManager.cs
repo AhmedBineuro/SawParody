@@ -8,6 +8,7 @@ namespace KeypadSystem
         [SerializeField] private CharacterController player = null;
         [SerializeField] private KeypadInteractor keypadInteractor = null;
         [SerializeField] private InputBehavior inputBehavior = null;
+        [SerializeField] private PauseMenuManager pauseMenuManager = null;
         public static KPDisableManager instance;
 
         void Awake()
@@ -38,6 +39,14 @@ namespace KeypadSystem
             if (inputBehavior != null)
             {
                 inputBehavior.look.MoveCam = !inputBehavior.look.MoveCam;
+            }
+            else
+            {
+                Debug.LogError("Add the input behaviour script (Usually found on the Player) to the Disable Manager");
+            }
+            if (pauseMenuManager != null)
+            {
+                pauseMenuManager.enabled = !disable;
             }
             else
             {
