@@ -185,8 +185,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In a room, count beds, trolleys, and stretchers too. Beds are hundreds.
-    trolleys tens, stretchers make the last digit true.
+  m_text: 'In Orwell''s world of watchful eyes,
+
+    Where truth is dressed in lies.
+
+    A
+    year of fear, a dystopian story,
+
+    A time marked by Big Brother''s glory.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ad3d036ea002724681497c6e931cc41, type: 2}
   m_sharedMaterial: {fileID: -8295383857174244563, guid: 4ad3d036ea002724681497c6e931cc41, type: 2}
@@ -1684,8 +1690,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In a room, count beds, trolleys, and stretchers too. Beds are hundreds.
-    trolleys tens, stretchers make the last digit true.
+  m_text: 'In a kitchen, quiet and bare,
+
+    Sit ninety-seven chairs.
+
+    Six
+    mugs on the shelf, in silent debate,
+
+    Plus three broken plates, what''s
+    the total we state?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ad3d036ea002724681497c6e931cc41, type: 2}
   m_sharedMaterial: {fileID: -8295383857174244563, guid: 4ad3d036ea002724681497c6e931cc41, type: 2}
@@ -13640,7 +13653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3470644702955850965, guid: a77b97f9b20a23c4aa04fa687a9af075, type: 3}
       propertyPath: keypadCodesList.Array.data[0].keypadCode
-      value: 5567
+      value: 1984
       objectReference: {fileID: 0}
     - target: {fileID: 3470644702955850965, guid: a77b97f9b20a23c4aa04fa687a9af075, type: 3}
       propertyPath: keypadCodesList.Array.data[0].keypadEvent.m_PersistentCalls.m_Calls.Array.size
@@ -31157,7 +31170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3470644702955850965, guid: a77b97f9b20a23c4aa04fa687a9af075, type: 3}
       propertyPath: keypadCodesList.Array.data[0].keypadCode
-      value: 1234
+      value: 103
       objectReference: {fileID: 0}
     - target: {fileID: 3470644702955850965, guid: a77b97f9b20a23c4aa04fa687a9af075, type: 3}
       propertyPath: keypadCodesList.Array.data[0].keypadEvent.m_PersistentCalls.m_Calls.Array.size
