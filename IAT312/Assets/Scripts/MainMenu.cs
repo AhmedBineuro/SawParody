@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("TutorialRoom");
+        SceneManager.LoadSceneAsync("CutScene");
     }
     public void QuitGame()
     {
