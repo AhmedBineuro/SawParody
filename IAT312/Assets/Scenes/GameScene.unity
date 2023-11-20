@@ -14551,37 +14551,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueSegments:
   - SubjectText: 'Mastermind:'
-    DialogueToPrint: Ah, Detective, you've managed to escape my initial trap. Impressive.
-      But your challenges are far from over.
+    DialogueToPrint: Impressive, Detective. Your mind is as sharp as they say.
     Skippable: 0
     LettersPerSecond: 11
   - SubjectText: 'Detective:'
-    DialogueToPrint: You won't get away with this, MasterMind. I'll solve whatever
-      you throw at me.
+    DialogueToPrint: What's next? More of your twisted games?
     Skippable: 0
     LettersPerSecond: 11
   - SubjectText: 'Mastermind:'
-    DialogueToPrint: Very well. Ahead of you lie two doors. Choose wisely, for your
-      fate hangs in the balance.
+    DialogueToPrint: Oh, it's much more than a game. It's a journey through the depths
+      of choice and consequence. Ahead of you, two doors, each leading to a realm
+      of mysteries untold.
     Skippable: 0
     LettersPerSecond: 11
   - SubjectText: 'Detective:'
-    DialogueToPrint: And what 'delights' do these doors hold?
+    DialogueToPrint: What's behind them?
     Skippable: 0
     LettersPerSecond: 11
   - SubjectText: 'Mastermind:'
-    DialogueToPrint: The door ahead is a labyrinth of numbers, a combination that
-      even the brightest minds have failed to unlock. The door to your right is a
-      riddle, a question with an answer so elusive, it has driven men to madness.
+    DialogueToPrint: To your left, a door that echoes a year of dystopian dread,
+      where eyes watch every move. And to your right, a passage veiled in intimacy
+      and betrayal, a bond turned dark.
     Skippable: 0
     LettersPerSecond: 11
   - SubjectText: 'Detective:'
-    DialogueToPrint: Numbers or riddles, it doesn't matter. I'll solve them and put
-      an end to your twisted games.
+    DialogueToPrint: You expect me to choose blindly?
     Skippable: 0
     LettersPerSecond: 11
   - SubjectText: 'Mastermind:'
-    DialogueToPrint: Hahaha! We shall see, Detective. We shall see. Choose your path!
+    DialogueToPrint: Not blindly, but with the wisdom of your experience. Choose,
+      Detective. The door to the left, where numbers tell a tale of control, or the
+      right, where the closest bond becomes the deepest fear.
     Skippable: 0
     LettersPerSecond: 11
   SubjectText: {fileID: 210664784}
@@ -31445,9 +31445,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueSegments:
   - SubjectText: 'Mastermind:'
-    DialogueToPrint: 'Detective, your intellect has served you well so far. This
-      next challenge hinges on your mathematical prowess. In order to unlock the
-      door in front of you, you need a 4-digit password. '
+    DialogueToPrint: Ah, the path of Orwellian foresight. Beware, Detective, for
+      in this room, every step is watched, every breath is heard. The shadows of
+      Big Brother loom large here.
     Skippable: 0
     LettersPerSecond: 11
   SubjectText: {fileID: 210664784}
@@ -32036,13 +32036,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueSegments:
   - SubjectText: 'Mastermind:'
-    DialogueToPrint: "Wise choice, Detective. This next challenge requires a three-letter
-      password. Once you think you\u2019ve cracked my riddle, the door shall open
-      before you."
-    Skippable: 0
-    LettersPerSecond: 11
-  - SubjectText: 'Detective:'
-    DialogueToPrint: "I\u2019m ready. Give me the Riddle."
+    DialogueToPrint: So you venture into the shadows of the heart. Tread carefully,
+      Detective, for what lies within is a tale of love twisted into something much
+      darker.
     Skippable: 0
     LettersPerSecond: 11
   SubjectText: {fileID: 210664784}
