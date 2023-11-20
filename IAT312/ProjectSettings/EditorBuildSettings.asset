@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: b0a5abcbc580be24e921bed329bb5f90
+  - enabled: 1
+    path: Assets/Scenes/TutorialRoom.unity
+    guid: 2e2455a486a61b0489bc24dd79187b89
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/BadEnding.unity
+    guid: 151b0c428593ea94fad327ebe50436c5
+  - enabled: 1
+    path: Assets/Scenes/GoodEnding.unity
+    guid: ab4af35e68a3e094f9731a16e6c8eb53
+  - enabled: 1
+    path: Assets/Scenes/WifeLeftEnding.unity
+    guid: cd7a87ee2d0271c49873f40b49181f97
+  - enabled: 1
+    path: Assets/Scenes/WireGameScene.unity
+    guid: f54b5863f05a12c47ba736da8ed33259
+  - enabled: 1
+    path: Assets/Scenes/CutScene.unity
+    guid: e2b4c2d2ad85edc46a2a37a4d5025c00
+  m_configObjects: {}
