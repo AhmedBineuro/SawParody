@@ -5554,7 +5554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1536528668908474812, guid: add02d37e2fde17419d9253f0c373fbe, type: 3}
       propertyPath: _inputLimit
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1536528668908474812, guid: add02d37e2fde17419d9253f0c373fbe, type: 3}
       propertyPath: keypadCodesList.Array.size
@@ -5562,7 +5562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1536528668908474812, guid: add02d37e2fde17419d9253f0c373fbe, type: 3}
       propertyPath: keypadCodesList.Array.data[0].keypadCode
-      value: BAT
+      value: WIFE
       objectReference: {fileID: 0}
     - target: {fileID: 1536528668908474812, guid: add02d37e2fde17419d9253f0c373fbe, type: 3}
       propertyPath: keypadCodesList.Array.data[1].keypadCode
@@ -6166,6 +6166,7 @@ GameObject:
   - component: {fileID: 416123212}
   - component: {fileID: 416123215}
   - component: {fileID: 416123216}
+  - component: {fileID: 416123217}
   m_Layer: 0
   m_Name: PRS_POL
   m_TagString: Untagged
@@ -6295,7 +6296,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Function:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 416123217}
+        m_TargetAssemblyTypeName: PolaroidDisplayer, Assembly-CSharp
+        m_MethodName: showImage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &416123217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416123209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c940d3da34513fd409575d4475f1bb6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 341572125}
+  inputBehavior: {fileID: 341572131}
+  image: {fileID: 237528879}
 --- !u!1001 &418854179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11756,6 +11784,7 @@ GameObject:
   - component: {fileID: 783470046}
   - component: {fileID: 783470049}
   - component: {fileID: 783470050}
+  - component: {fileID: 783470051}
   m_Layer: 0
   m_Name: JPN_POL
   m_TagString: Untagged
@@ -11885,7 +11914,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Function:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 783470051}
+        m_TargetAssemblyTypeName: PolaroidDisplayer, Assembly-CSharp
+        m_MethodName: showImage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &783470051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783470043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c940d3da34513fd409575d4475f1bb6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 341572125}
+  inputBehavior: {fileID: 341572131}
+  image: {fileID: 1989236113}
 --- !u!1 &786438159
 GameObject:
   m_ObjectHideFlags: 0
@@ -12224,6 +12280,7 @@ GameObject:
   - component: {fileID: 804813832}
   - component: {fileID: 804813835}
   - component: {fileID: 804813836}
+  - component: {fileID: 804813837}
   m_Layer: 0
   m_Name: LNDN_POL
   m_TagString: Untagged
@@ -12353,7 +12410,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Function:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 804813837}
+        m_TargetAssemblyTypeName: PolaroidDisplayer, Assembly-CSharp
+        m_MethodName: showImage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &804813837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804813829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c940d3da34513fd409575d4475f1bb6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 341572125}
+  inputBehavior: {fileID: 341572131}
+  image: {fileID: 2091107303}
 --- !u!1 &812029459
 GameObject:
   m_ObjectHideFlags: 0
@@ -19786,8 +19870,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In a room, count beds, trolleys, and stretchers too. Beds are hundreds.
-    trolleys tens, stretchers make the last digit true.
+  m_text: 'In a home where whispers linger,
+
+    She moves with a ghostly finger.
+
+    By
+    your side but veiled in strife,
+
+    Who is she, partner in life'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ad3d036ea002724681497c6e931cc41, type: 2}
   m_sharedMaterial: {fileID: -8295383857174244563, guid: 4ad3d036ea002724681497c6e931cc41, type: 2}
@@ -20028,18 +20118,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1356480277}
-        m_TargetAssemblyTypeName: ChecListInteractor, Assembly-CSharp
-        m_MethodName: submitItem
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -20904,6 +20982,7 @@ GameObject:
   - component: {fileID: 1414867234}
   - component: {fileID: 1414867237}
   - component: {fileID: 1414867238}
+  - component: {fileID: 1414867239}
   m_Layer: 0
   m_Name: NY_POL
   m_TagString: Untagged
@@ -21033,7 +21112,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Function:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1414867239}
+        m_TargetAssemblyTypeName: PolaroidDisplayer, Assembly-CSharp
+        m_MethodName: showImage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1414867239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414867231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c940d3da34513fd409575d4475f1bb6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 341572125}
+  inputBehavior: {fileID: 341572131}
+  image: {fileID: 1144482069}
 --- !u!1 &1426642775
 GameObject:
   m_ObjectHideFlags: 0
@@ -21855,18 +21961,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1457372184}
-        m_TargetAssemblyTypeName: ChecListInteractor, Assembly-CSharp
-        m_MethodName: submitItem
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -24474,18 +24568,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1585538892}
-        m_TargetAssemblyTypeName: ChecListInteractor, Assembly-CSharp
-        m_MethodName: submitItem
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -28963,18 +29045,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1869130624}
-        m_TargetAssemblyTypeName: ChecListInteractor, Assembly-CSharp
-        m_MethodName: submitItem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
   preDialogueEvents:
     m_PersistentCalls:
       m_Calls:
@@ -29473,18 +29543,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1942624217}
-        m_TargetAssemblyTypeName: ChecListInteractor, Assembly-CSharp
-        m_MethodName: submitItem
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
