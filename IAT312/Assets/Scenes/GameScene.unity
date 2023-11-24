@@ -1694,11 +1694,11 @@ MonoBehaviour:
 
     Sit ninety-seven chairs.
 
-    Six mugs
-    on the shelf, in silent debate,
+    Three
+    mugs on the shelf, in silent debate,
 
-    Plus three broken plates, what''s the total
-    we state?'
+    Plus three broken plates, what''s the
+    total we state?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ad3d036ea002724681497c6e931cc41, type: 2}
   m_sharedMaterial: {fileID: -8295383857174244563, guid: 4ad3d036ea002724681497c6e931cc41, type: 2}
@@ -13290,7 +13290,7 @@ Transform:
   m_GameObject: {fileID: 804813829}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 422.059, y: 111.708, z: 122.809}
+  m_LocalPosition: {x: 383.445, y: 112.474, z: 149.889}
   m_LocalScale: {x: 0.03074677, y: 0.03074677, z: 0.03074677}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14311,7 +14311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3581135508761491277, guid: a77b97f9b20a23c4aa04fa687a9af075, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -212.943
+      value: -212.895
       objectReference: {fileID: 0}
     - target: {fileID: 3581135508761491277, guid: a77b97f9b20a23c4aa04fa687a9af075, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22940,7 +22940,7 @@ Transform:
   m_GameObject: {fileID: 1414867231}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 383.952, y: 112.474, z: 149.811}
+  m_LocalPosition: {x: 422.059, y: 111.708, z: 122.809}
   m_LocalScale: {x: 0.03074677, y: 0.03074677, z: 0.03074677}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26870,7 +26870,8 @@ MonoBehaviour:
     Skippable: 0
     LettersPerSecond: 11
   - SubjectText: 'Michelle (Wife):'
-    DialogueToPrint: "James, I knew you\u2019d come for me!"
+    DialogueToPrint: "James, I knew you\u2019d come for me! I thought that our trip
+      to london would've been our last!"
     Skippable: 0
     LettersPerSecond: 11
   - SubjectText: 'Mastermind:'
